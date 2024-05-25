@@ -5,7 +5,7 @@ Fast and well-tested implementations of edit distance/string similarity metrics:
 Levenshtein, Damerau-Levenshtein, Hamming, Jaro, and Jaro-Winkler.
 """
 version = "0.4.2"
-edition = "2018"
+edition = "2021"
 authors = ["Ilia Schelokov <thaumant@gmail.com>"]
 homepage = "http://github.com/thaumant/eddie"
 repository = "http://github.com/thaumant/eddie"
@@ -26,12 +26,12 @@ keywords = [
 
 [dev-dependencies]
 edit-distance = "2.1.0"
-criterion = "0.3"
+criterion = "0.5.1"
 distance = "0.4"
 txtdist = "0.2"
-natural = "0.3"
-strsim = "0.9"
-rand = "0.7"
+natural = "0.5"
+strsim = "0.11"
+rand = "^0"
 
 [[bench]]
 name = "leven"

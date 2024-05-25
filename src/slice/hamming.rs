@@ -196,8 +196,8 @@ mod tests {
     fn inequality() {
         let hamming = Hamming::new();
         for i in 1..10 {
-            let s1: Vec<&usize> = [1].into_iter().cycle().take(i).collect();
-            let s2: Vec<&usize> = [2].into_iter().cycle().take(i).collect();
+            let s1: Vec<usize> = [1].into_iter().cycle().take(i).collect();
+            let s2: Vec<usize> = [2].into_iter().cycle().take(i).collect();
             assert_eq!(hamming.distance(&s1, &s2), Some(i));
         }
     }
@@ -207,9 +207,9 @@ mod tests {
         let hamming = Hamming::new();
         for len1 in 1..10 {
             for len2 in 0 .. len1 - 1 {
-                let a1: Vec<&usize> = [1].into_iter().cycle().take(len1).collect();
-                let a2: Vec<&usize> = [1].into_iter().cycle().take(len2).collect();
-                let b2: Vec<&usize> = [2].into_iter().cycle().take(len2).collect();
+                let a1: Vec<usize> = [1].into_iter().cycle().take(len1).collect();
+                let a2: Vec<usize> = [1].into_iter().cycle().take(len2).collect();
+                let b2: Vec<usize> = [2].into_iter().cycle().take(len2).collect();
 
                 assert_eq!(hamming.distance(&a1, &a2), None);
                 assert_eq!(hamming.distance(&a2, &a1), None);

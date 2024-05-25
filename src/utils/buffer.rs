@@ -16,17 +16,18 @@ impl<T: Copy> Buffer<T> {
         {
             let buf = &mut *self.cell.borrow_mut();
             buf.clear();
-            let mut cap = buf.capacity();
+            //let mut cap = buf.capacity();
             let mut i = 0;
             for item in iter {
-                if i >= cap {
-                    buf.reserve(max(cap * 2, 1));
-                    cap = buf.capacity();
+                let existing = buf.get_mut(i);
+                if let Some(existing) = existing {
+                    *existing = item;
                 }
-                unsafe { *buf.get_unchecked_mut(i) = item; }
+                else {
+                    buf.push(item);
+                };
                 i += 1;
             }
-            unsafe { buf.set_len(i); }
         }
         &self.cell
     }
