@@ -4,11 +4,11 @@ description = """
 Fast and well-tested implementations of edit distance/string similarity metrics:
 Levenshtein, Damerau-Levenshtein, Hamming, Jaro, and Jaro-Winkler.
 """
-version = "0.4.2"
+version = "0.4.3"
 edition = "2021"
-authors = ["Ilia Schelokov <thaumant@gmail.com>"]
-homepage = "http://github.com/thaumant/eddie"
-repository = "http://github.com/thaumant/eddie"
+authors = ["Ilia Schelokov <thaumant@gmail.com>", "Sebastian <sebastian@blockforo.com>"]
+homepage = "http://github.com/pier-dev/eddie"
+repository = "http://github.com/pier-dev/eddie"
 documentation = "https://docs.rs/eddie/"
 license = "MIT"
 categories = [
